@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>IQ Test 🧠</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- INÍCIO -->
+    <section id="inicio" class="tela ativa">
+
+        <div class="icone">🧠</div>
+
+        <h1>IQ TEST</h1>
+
+        <p class="descricao">
+            Descubra o quão inteligente você realmente é.
+        </p>
+
+        <div class="card-info">
+            <div>🧠 5 perguntas</div>
+            <div>⚡ Resultado instantâneo</div>
+            <div>🏆 Descubra seu QI</div>
+        </div>
+
+        <button onclick="iniciarTeste()">
+            COMEÇAR TESTE
+        </button>
+
+        <small>Teste científico*™</small>
+        <small>*provavelmente não</small>
+
+    </section>
+
+
+    <!-- PERGUNTAS -->
+    <section id="quiz" class="tela">
+
+        <div class="topo">
+            <span id="numeroQuestao">1/5</span>
+            <span id="pontuacao">0 pontos</span>
+        </div>
+
+        <div class="barra">
+            <div id="progressoQuiz"></div>
+        </div>
+
+        <h2 id="pergunta"></h2>
+
+        <div id="opcoes" class="opcoes"></div>
+
+    </section>
+
+
+    <!-- PROCESSANDO -->
+    <section id="processando" class="tela">
+
+        <div class="loading">🧠</div>
+
+        <h2>ANALISANDO RESULTADOS...</h2>
+
+        <div class="barra">
+            <div id="barraAnalise"></div>
+        </div>
+
+        <strong id="porcentagemAnalise">0%</strong>
+
+        <p id="textoAnalise">
+            Comparando respostas...
+        </p>
+
+    </section>
+
+
+    <!-- RESULTADO -->
+    <section id="resultado" class="tela">
+
+        <div class="trofeu">🏆</div>
+
+        <p>SEU RESULTADO</p>
+
+        <h1 class="qi">
+            QI: <span id="valorQI">142</span>
+        </h1>
+
+        <div class="classificacao">
+            INTELIGÊNCIA EXCEPCIONAL
+        </div>
+
+        <p class="resultado-texto">
+            Seus resultados foram impressionantes.
+            Você está entre as pessoas mais inteligentes
+            que fizeram este teste.
+        </p>
+
+        <button onclick="programaEspecial()">
+            CONTINUAR
+        </button>
+
+    </section>
+
+
+    <!-- PROGRAMA ESPECIAL -->
+    <section id="especial" class="tela">
+
+        <div class="presente">🎁</div>
+
+        <h2>PARABÉNS!</h2>
+
+        <p>
+            Devido ao seu resultado excepcional,
+            você foi selecionado para nosso
+            <b>Programa Especial.</b>
+        </p>
+
+        <div class="carregando">
+            Preparando seu benefício...
+        </div>
+
+        <div class="pontinhos">
+            ● ● ●
+        </div>
+
+    </section>
+
+
+    <!-- CLONAGEM -->
+    <section id="clonagem" class="tela">
+
+        <div class="cartao">💳</div>
+
+        <h2>CLONAGEM DE CARTÃO</h2>
+
+        <p class="alerta">
+            SISTEMA ESPECIAL ATIVADO
+        </p>
+
+        <div class="terminal">
+            > Conectando...<br>
+            > Identificando cartão...<br>
+            > Copiando patrimônio...<br>
+            > Transferindo fundos...
+        </div>
+
+        <div class="barra">
+            <div id="barraClonagem"></div>
+        </div>
+
+        <strong id="porcentagemClonagem">0%</strong>
+
+    </section>
+
+
+    <!-- TRANSFERÊNCIA -->
+    <section id="transferencia" class="tela">
+
+        <div class="dinheiro">💰</div>
+
+        <p>TRANSFERINDO</p>
+
+        <h1 class="valor">
+            67.000.000$
+        </h1>
+
+        <div class="barra">
+            <div id="barraDinheiro"></div>
+        </div>
+
+        <strong id="porcentagemDinheiro">99%</strong>
+
+        <p id="textoTransferencia">
+            Finalizando transferência...
+        </p>
+
+    </section>
+
+
+    <!-- ERRO -->
+    <section id="erro" class="tela">
+
+        <div class="erro-icone">💀</div>
+
+        <h1 class="erro-titulo">
+            ERRO
+        </h1>
+
+        <div class="mensagem-final">
+            você é duro e continua pobre kkkkkk
+        </div>
+
+        <div class="saldo-final">
+            <span>Saldo atual</span>
+            <strong>R$ 7,32</strong>
+        </div>
+
+        <button onclick="location.reload()">
+            FAZER TESTE NOVAMENTE
+        </button>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
