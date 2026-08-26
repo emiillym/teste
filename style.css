@@ -1,0 +1,437 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    background:
+        radial-gradient(circle at top, #222244, #08080d 55%);
+
+    color: white;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
+}
+
+.app {
+    width: 100%;
+    max-width: 420px;
+
+    min-height: 680px;
+    min-height: min(680px, 92dvh);
+
+    background: #101016;
+
+    border: 1px solid #292934;
+    border-radius: 28px;
+
+    padding: 30px 24px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.6);
+
+    overflow: hidden;
+}
+
+.tela {
+    display: none;
+
+    width: 100%;
+    min-height: 610px;
+
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+
+    animation: aparecer .4s ease;
+}
+
+.tela.ativa {
+    display: flex;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.icone {
+    font-size: 80px;
+    margin-bottom: 20px;
+
+    animation: flutuar 2s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+h1 {
+    font-size: 34px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.descricao {
+    color: #aaa;
+    line-height: 1.5;
+    margin: 15px 0 25px;
+}
+
+.card-info {
+    background: #181821;
+
+    border: 1px solid #292936;
+    border-radius: 15px;
+
+    padding: 17px;
+
+    text-align: left;
+
+    line-height: 2;
+
+    color: #ccc;
+
+    margin-bottom: 25px;
+}
+
+button {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #6c5ce7;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+button:active {
+    transform: scale(.97);
+}
+
+small {
+    color: #555;
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+}
+
+.barra {
+    width: 100%;
+    height: 10px;
+
+    background: #25252e;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin: 12px 0;
+}
+
+.barra div {
+    height: 100%;
+    width: 0%;
+
+    background: #6c5ce7;
+
+    transition: width .3s;
+}
+
+#pergunta {
+    margin: 35px 0 25px;
+    line-height: 1.4;
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.opcao {
+    background: #181821;
+
+    border: 1px solid #30303c;
+
+    color: white;
+
+    border-radius: 12px;
+
+    padding: 16px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.opcao:hover {
+    background: #242433;
+    border-color: #6c5ce7;
+}
+
+.loading {
+    font-size: 70px;
+
+    animation: girar 1.5s linear infinite;
+
+    margin-bottom: 25px;
+}
+
+@keyframes girar {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#textoAnalise {
+    color: #aaa;
+    margin-top: 15px;
+}
+
+.trofeu,
+.presente,
+.cartao,
+.dinheiro,
+.erro-icone {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.qi {
+    font-size: 55px;
+    margin: 15px 0;
+}
+
+.qi span {
+    color: #a78bfa;
+}
+
+.classificacao {
+    display: inline-block;
+
+    background: #201b3b;
+    color: #b7a7ff;
+
+    padding: 10px 14px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.resultado-texto {
+    color: #aaa;
+
+    line-height: 1.5;
+
+    margin-bottom: 30px;
+}
+
+.carregando {
+    margin-top: 25px;
+
+    color: #aaa;
+}
+
+.pontinhos {
+    margin-top: 15px;
+
+    color: #6c5ce7;
+
+    letter-spacing: 6px;
+
+    animation: piscar 1s infinite;
+}
+
+@keyframes piscar {
+    50% {
+        opacity: .2;
+    }
+}
+
+.alerta {
+    color: #ff5252;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.terminal {
+    background: #050505;
+
+    border: 1px solid #222;
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    text-align: left;
+
+    color: #54e68a;
+
+    font-family: monospace;
+    font-size: 12px;
+
+    line-height: 2;
+
+    margin-bottom: 20px;
+}
+
+.valor {
+    font-size: clamp(28px, 8vw, 42px);
+
+    margin: 15px 0;
+}
+
+.erro-titulo {
+    font-size: 60px;
+
+    color: #ff3b3b;
+
+    animation: erroPisca .7s infinite;
+}
+
+@keyframes erroPisca {
+    50% {
+        opacity: .25;
+    }
+}
+
+.mensagem-final {
+    font-size: 18px;
+
+    color: #aaa;
+
+    margin: 20px 0 25px;
+
+    line-height: 1.4;
+}
+
+.saldo-final {
+    background: #181821;
+
+    border-radius: 15px;
+
+    padding: 18px;
+
+    margin-bottom: 25px;
+}
+
+.saldo-final span {
+    display: block;
+
+    color: #777;
+
+    font-size: 11px;
+
+    margin-bottom: 6px;
+}
+
+.saldo-final strong {
+    font-size: 27px;
+}
+
+
+/* CELULAR PEQUENO */
+@media (max-height: 700px) {
+
+    .app {
+        min-height: 95dvh;
+        padding: 20px;
+    }
+
+    .tela {
+        min-height: 600px;
+    }
+
+    .icone {
+        font-size: 60px;
+    }
+
+    .card-info {
+        padding: 12px;
+    }
+
+}
+
+
+/* CELULAR */
+@media (max-width: 430px) {
+
+    body {
+        padding: 0;
+    }
+
+    .app {
+        min-height: 100dvh;
+
+        border-radius: 0;
+        border: none;
+
+        padding:
+            max(20px, env(safe-area-inset-top))
+            20px
+            max(20px, env(safe-area-inset-bottom));
+    }
+
+    .tela {
+        min-height: calc(100dvh - 40px);
+    }
+
+          }
